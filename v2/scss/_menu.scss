@@ -1,0 +1,15 @@
+#menu_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    font-family: "MostraNuova-Bold";
+    line-height: 1rem;
+    font-size: 10px;
+    color: $primary-color;
+    text-transform: uppercase;
+    &::before {
+        content: "menu";
+    }
+}

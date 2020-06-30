@@ -1,0 +1,117 @@
+$primary-color:#a39475;
+h1 {
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "MostraNuova-Bold";
+}
+
+h2 {
+    color: $primary-color;
+    font-family: MostraNuova-Light;
+}
+
+h3 {
+    color: $primary-color;
+    text-align: center;
+}
+
+body {
+    background: url("../../images/bg-black.svg");
+}
+
+p {
+    font-family: "MyriadPro-Light-It";
+}
+
+li {
+    font-family: "MyriadPro-Light-It";
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin media-md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin transition-ease {
+    transition: all 1s ease-in-out;
+}
+
+@mixin mirror {
+    @for $i from 5 through 7 {
+        &:nth-child(#{$i}) {
+            text-align: right;
+        }
+    }
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.fade-in {
+    opacity: 0;
+    @for $i from 1 through 9 {
+        &:nth-child(#{$i}) {
+            @if $i==1 {
+                transform: translateX(-200%);
+            }
+            @if $i==4 {
+                transform: translateX(-200%);
+            }
+            @if $i==7 {
+                transform: translateX(-200%);
+            }
+            @if $i==2 {
+                transform: translateY(200%);
+            }
+            @if $i==5 {
+                transform: translateY(200%);
+            }
+            @if $i==8 {
+                transform: translateY(200%);
+            }
+            @if $i==3 {
+                transform: translateX(200%);
+            }
+            @if $i==6 {
+                transform: translateX(200%);
+            }
+            @if $i==9 {
+                transform: translateX(200%);
+            }
+        }
+    }
+}
+
+.fade-in.appear {
+    @for $i from 1 through 9 {
+        &:nth-child(#{$i}) {
+            transition-delay: ($i * 0.1s) + 0.5s;
+        }
+        transform: translateX(0%);
+        transition: opacity 350ms ease-in,
+        transform 1s ease-in;
+        opacity: 1;
+    }
+}
+
+.slide-in.appear {
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+            transition-delay: ($i * 0.1s) + 0.5s;
+        }
+        transform: translateY(0%);
+        transition: opacity 250ms ease-in,
+        transform 1s ease-in;
+        opacity: 1;
+    }
+}

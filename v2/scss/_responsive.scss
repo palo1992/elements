@@ -1,0 +1,196 @@
+                @include media-md {
+                    .about {
+                        &__main {
+                            width: 90%;
+                        }
+                        &__footer {
+                            height: 400px;
+                            img {
+                                &:first-child {
+                                    object-fit: contain;
+                                    object-position: 0px 0px;
+                                }
+                                &:nth-child(2) {
+                                    height: 100%;
+                                    width: 100%;
+                                    object-position: 0px 0px;
+                                    object-fit: contain;
+                                }
+                                &:last-child {
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -100%);
+                                }
+                            }
+                        }
+                    }
+                    .offers {
+                        top: 3vh;
+                        &__main {
+                            width: 90%;
+                            h1 {
+                                font-size: 1rem;
+                            }
+                        }
+                        &__content-headline {
+                            .col {
+                                &__header {
+                                    font-size: .7rem;
+                                    color: red;
+                                }
+                            }
+                        }
+                        &__content {
+                            font-size: 1rem;
+                        }
+                        &__header {
+                            width: 210px;
+                            height: 80px;
+                            background-size: contain;
+                            background-position: center;
+                        }
+                        &__footer {
+                            height: 400px;
+                            img {
+                                &:first-child {
+                                    object-fit: contain;
+                                    object-position: 0px 0px;
+                                }
+                                &:nth-child(2) {
+                                    height: 100%;
+                                    width: 100%;
+                                    object-position: 0px 0px;
+                                    object-fit: contain;
+                                }
+                                &:last-child {
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -100%);
+                                }
+                            }
+                        }
+                    }
+                    .needs {
+                        top: 14vh;
+                        &__main {
+                            width: 90%;
+                        }
+                        &__content-headline {
+                            grid-template-columns: repeat(4, 80px);
+                        }
+                        &__footer {
+                            height: 400px;
+                            img {
+                                &:first-child {
+                                    object-fit: contain;
+                                    object-position: 0px 0px;
+                                }
+                                &:nth-child(2) {
+                                    height: 100%;
+                                    width: 100%;
+                                    object-position: 0px 0px;
+                                    object-fit: contain;
+                                }
+                                &:last-child {
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -100%);
+                                }
+                            }
+                        }
+                    }
+                    .change {
+                        top: 16vh;
+                        &__main {
+                            width: 90%;
+                        }
+                        &__content-headline {
+                            grid-template-columns: 80px 100px 80px;
+                        }
+                        &__footer {
+                            height: 400px;
+                            img {
+                                &:first-child {
+                                    object-fit: contain;
+                                    object-position: 0px 0px;
+                                }
+                                &:nth-child(2) {
+                                    height: 100%;
+                                    width: 100%;
+                                    object-position: 0px 0px;
+                                    object-fit: contain;
+                                }
+                                &:last-child {
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -140%);
+                                }
+                            }
+                        }
+                    }
+                    .partners {
+                        top: 18vh;
+                        &__main {
+                            width: 90%;
+                        }
+                        &__content {
+                            width: 90%;
+                        }
+                        &__footer {
+                            height: 400px;
+                            img {
+                                &:first-child {
+                                    object-fit: contain;
+                                    object-position: 0px 0px;
+                                }
+                                &:nth-child(2) {
+                                    height: 100%;
+                                    width: 100%;
+                                    object-position: 0px 0px;
+                                    object-fit: cover;
+                                }
+                                &:last-child {
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -170%) scale(0.5, 0.5);
+                                }
+                            }
+                        }
+                    }
+                    .contact {
+                        top: -22vh;
+                        &__main {
+                            width: 90%;
+                        }
+                        &__form {
+                            width: 90%;
+                            form {
+                                grid-template-areas: "form-name" "email" "phone""text" "btn";
+                                textarea[name="message"] {
+                                    margin-top: 50px;
+                                }
+                            }
+                            .flash1 {
+                                position: absolute;
+                                top: 54px;
+                                color: rgb(228, 32, 228);
+                            }
+                            .flash2 {
+                                position: absolute;
+                                top: 107px;
+                                color: rgb(228, 32, 228);
+                            }
+                            .flash3 {
+                                position: absolute;
+                                top: 160px;
+                                color: rgb(228, 32, 228);
+                            }
+                            .flash4 {
+                                position: absolute;
+                                top: 380px;
+                                left: 0px;
+                                color: rgb(228, 32, 228);
+                            }
+                        }
+                    }
+                }

@@ -1,0 +1,154 @@
+.needs {
+    min-height: 100vh;
+    width: 100%;
+    background: url("../../images/bg-needs.svg")no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+    padding-top: 300px;
+    position: relative;
+    top: 120vh;
+    &__container {
+        position: relative;
+        display: grid;
+        grid-template-areas: "needs-title";
+        width: 100%;
+        height: 100%;
+    }
+    &__main {
+        grid-area: needs-title;
+        width: 70%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: "needs-header" "needs-content-headline" "needs-content";
+        gap: 2rem;
+    }
+    &__header {
+        width: 270px;
+        height: 120px;
+        align-self: center;
+        grid-area: needs-header;
+        text-align: center;
+        padding-top: 25px;
+        margin: 0 auto;
+        background: url("../../images/header-need.svg") no-repeat;
+        h1 {
+            font-size: 1.4rem;
+        }
+        h3 {
+            font-size: .7rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+    &__content-headline {
+        grid-area: needs-content-headline;
+        display: grid;
+        grid-template-columns: repeat(4, 160px);
+        justify-content: center;
+        .col {
+            width: 100%;
+            &__header {
+                text-align: center;
+                color: $primary-color;
+                text-transform: uppercase;
+                line-height: 1.5rem;
+                margin-bottom: 2rem;
+                hr {
+                    width: 35px;
+                    margin: 10px auto 0 auto;
+                    border-top: 3px solid $primary-color;
+                }
+            }
+            &__img {
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    filter: grayscale(100);
+                    transition: filter 1s ease-in-out;
+                    &:nth-child(2) {
+                        filter: none;
+                        position: absolute;
+                        top: -5px;
+                        left: -5px;
+                        transition: transform 1s ease-in-out;
+                    }
+                }
+                hr {
+                    position: relative;
+                    top: -3px;
+                    margin: 0 auto;
+                    border-top: 5px solid $primary-color;
+                }
+                &:hover {
+                    img {
+                        filter: none;
+                        &:nth-child(2) {
+                            transform: translate(5%, -1%);
+                        }
+                    }
+                    hr {
+                        border-color: steelblue;
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        grid-area: needs-content;
+        padding: 0 3rem;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        p {
+            text-align: center;
+        }
+        ol {
+            list-style-type: upper-roman;
+            li {
+                text-transform: uppercase;
+                color: $primary-color;
+            }
+            p {
+                text-align: justify;
+                margin-bottom: 3rem;
+            }
+        }
+        div {
+            margin: 2.5rem 0;
+        }
+    }
+    &__ornament {
+        display: flex;
+        margin: 0 auto 3rem auto;
+    }
+    &__footer {
+        position: absolute;
+        width: 100%;
+        height: 800px;
+        bottom: 0%;
+        transform: translate(0, 100%);
+        img {
+            position: absolute;
+            &:first-child {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0 -150px;
+            }
+            &:nth-child(2) {
+                width: 25%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0 50;
+            }
+            &:last-child {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -220px);
+            }
+        }
+    }
+}

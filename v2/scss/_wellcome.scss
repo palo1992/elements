@@ -1,0 +1,13 @@
+.wellcome {
+    min-height: 100vh;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            margin-top: 50vh;
+            margin-bottom: 50vh;
+            text-align: center;
+            color: $primary-color;
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.change {
+    min-height: 100vh;
+    width: 100%;
+    background: url("../../images/bg-transform.svg")no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+    padding-top: 300px;
+    position: relative;
+    top: 160vh;
+    &__container {
+        position: relative;
+        display: grid;
+        grid-template-areas: "change-title";
+        width: 100%;
+    }
+    &__main {
+        grid-area: change-title;
+        width: 50%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: "change-header" "change-content-headline" "change-content";
+        gap: 2rem;
+    }
+    &__header {
+        width: 300px;
+        height: 120px;
+        align-self: center;
+        grid-area: change-header;
+        text-align: center;
+        padding-top: 25px;
+        margin: 0 auto;
+        background: url("../../images/header-transform.png") no-repeat;
+        h1 {
+            font-size: 1.4rem;
+        }
+        h3 {
+            font-size: .7rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+    &__content-headline {
+        width: 70%;
+        justify-self: center;
+        grid-area: change-content-headline;
+        display: grid;
+        grid-template-columns: 100px 150px 100px;
+        justify-content: space-evenly;
+        .col {
+            width: 100%;
+            &.slide-in.appear {
+                &:nth-child(2) {
+                    transition-delay: .5s;
+                }
+            }
+            &__header {
+                text-align: center;
+                color: $primary-color;
+                text-transform: uppercase;
+                line-height: 1.5rem;
+                margin-bottom: 2rem;
+                hr {
+                    width: 35px;
+                    margin: 10px auto 0 auto;
+                    border-top: 3px solid $primary-color;
+                }
+            }
+            &__img {
+                position: relative;
+                border: 2px solid $primary-color;
+                border-radius: 50%;
+                transition: border 1s ease-in-out;
+                img {
+                    position: relative;
+                    display: flex;
+                    left: 2px;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    filter: grayscale(100);
+                    transition: filter 1s ease-in-out;
+                    &:nth-child(2) {
+                        filter: none;
+                        position: absolute;
+                        top: -5px;
+                        left: -5px;
+                        transition: transform 1s ease-in-out;
+                    }
+                }
+                hr {
+                    position: relative;
+                    top: -3px;
+                    margin: 0 auto;
+                    border-top: 5px solid $primary-color;
+                }
+                &:hover {
+                    border-color: brown;
+                    img {
+                        filter: none;
+                        &:nth-child(2) {
+                            transform: translate(10%, 5%);
+                        }
+                    }
+                    hr {
+                        border-color: steelblue;
+                    }
+                }
+            }
+            .slide-in.appear {
+                &:nth-child(2) {
+                    transition-delay: -1.5s;
+                }
+            }
+        }
+    }
+    &__content {
+        grid-area: change-content;
+        width: 50%;
+        margin: 0 auto;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        p {
+            text-align: center;
+        }
+        div {
+            margin: 2.5rem 0;
+        }
+    }
+    &__ornament {
+        display: flex;
+        margin: 3rem auto;
+    }
+    &__footer {
+        position: absolute;
+        width: 100%;
+        height: 800px;
+        bottom: 0%;
+        transform: translate(0, 100%);
+        img {
+            position: absolute;
+            &:first-child {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0 0;
+            }
+            &:nth-child(2) {
+                width: 25%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0 50;
+            }
+            &:last-child {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -100px);
+            }
+        }
+    }
+}

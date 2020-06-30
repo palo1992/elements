@@ -1,0 +1,101 @@
+.partners {
+    min-height: 100vh;
+    width: 100%;
+    background: url("../../images/bg-partners.svg")no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+    padding-top: 300px;
+    position: relative;
+    top: 220vh;
+    &__container {
+        position: relative;
+        display: grid;
+        grid-template-areas: "partners-title";
+        width: 100%;
+    }
+    &__main {
+        grid-area: partners-title;
+        width: 70%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: "partners-header" "partners-content";
+        gap: 2rem;
+    }
+    &__header {
+        width: 210px;
+        height: 120px;
+        align-self: center;
+        grid-area: partners-header;
+        text-align: center;
+        padding-top: 25px;
+        margin: 0 auto;
+        background: url("../../images/header-partners.png") no-repeat;
+        h1 {
+            font-size: 1.4rem;
+        }
+        h3 {
+            font-size: .7rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+    &__content {
+        grid-area: partners-content;
+        width: 60%;
+        margin: 0 auto;
+        ul {
+            display: grid;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-columns: repeat(3, 1fr);
+            li {
+                width: 100px;
+                align-self: flex-end;
+                justify-self: center;
+                text-align: center;
+                list-style: none;
+                border-bottom: 2px solid $primary-color;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    &__map {
+        width: 100%;
+        margin: 5rem 0 1rem 0;
+        iframe {
+            filter: grayscale(100);
+            width: 100%;
+            height: 600px;
+        }
+    }
+    &__ornament {
+        display: flex;
+        margin: 3rem auto;
+    }
+    &__footer {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        img {
+            position: absolute;
+            &:first-child {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0 0;
+            }
+            &:nth-child(2) {
+                width: 55%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0 50;
+            }
+            &:last-child {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -125px);
+            }
+        }
+    }
+}
